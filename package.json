@@ -1,5 +1,5 @@
 {
-  "name": "storybook-design-poc",
+  "name": "@indranil-tiwary/storybook-design-poc",
   "version": "0.1.2",
   "private": false,
   "dependencies": {
@@ -68,7 +68,7 @@
   "description": "POC of Design System",
   "main": "dist/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/indranil-tiwary"
   },
   "repository": "git@github.com:indranil-tiwary/storybook-design-poc.git",
   "author": "Indranil Tiwary",
