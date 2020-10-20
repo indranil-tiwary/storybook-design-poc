@@ -1,5 +1,5 @@
 {
-  "name": "learnstorybook-design-system",
+  "name": "indraniltiwary-storybook-design-poc",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -15,18 +15,24 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook -s public --docs"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "babel": {
     "presets": [
-      "react-app"
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
     ]
   },
   "browserslist": {
@@ -42,16 +48,25 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
+    "@storybook/addon-a11y": "^6.0.26",
     "@storybook/addon-actions": "^6.0.26",
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/addon-links": "^6.0.26",
     "@storybook/node-logger": "^6.0.26",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.26",
+    "auto": "^9.59.1",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.2.0",
+    "cross-env": "^7.0.2",
     "prettier": "^2.1.2",
     "react-is": "^16.13.1"
-  }
+  },
+  "description": "POC of Design System",
+  "main": "dist/index.js",
+  "repository": "git@github.com:indranil-tiwary/storybook-design-poc.git",
+  "author": "Indranil Tiwary",
+  "license": "MIT"
 }
