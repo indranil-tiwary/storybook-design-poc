@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "build-storybook-docs": "build-storybook -s public --docs"
+    "build-storybook-docs": "build-storybook -s public --docs",
+    "release": "auto shipit"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -66,6 +67,9 @@
   },
   "description": "POC of Design System",
   "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": "git@github.com:indranil-tiwary/indraniltiwary-storybook-design-poc.git",
   "author": "Indranil Tiwary",
   "license": "MIT"
